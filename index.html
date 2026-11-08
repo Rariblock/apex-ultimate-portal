@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d0e12">
+  <meta name="description" content="Apex Legendsの情報・計算ツール・コミュニティを集約した非公式ポータル">
+  <title>APEX ULTIMATE PORTAL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="APEX ULTIMATE HOME"><span class="brand-mark">A</span><span>APEX<span class="red">ULTIMATE</span></span></a>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く"><i class="fa-solid fa-bars"></i></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">HOME</a>
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn">DATABASE <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="dropdown-menu">
+          <a href="#legends">レジェンド</a><a href="#skins">スキン・スパレジェ</a>
+          <a href="#weapons">武器・ティア</a><a href="#recoil">リコイル</a><a href="#pro">プロ設定</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn">TOOLS <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="dropdown-menu">
+          <a href="#roulette">キャラルーレット</a><a href="#damage">ダメージ計算</a>
+          <a href="#cooldowns">CT一覧</a><a href="#rank">RP計算</a><a href="#sensitivity">感度変換</a>
+          <a href="#aim">エイム練習</a><a href="#notes">Myメモ</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn">COMMUNITY <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="dropdown-menu">
+          <a href="#lfg">パーティー募集</a><a href="#community">掲示板</a><a href="#events">イベント</a>
+          <a href="#streamer">配信者ツール</a>
+        </div>
+      </div>
+    </nav>
+    <form class="search-wrap" id="searchForm"><i class="fa-solid fa-magnifying-glass"></i><input id="globalSearch" type="search" placeholder="サイト内を検索..." autocomplete="off"><button type="submit">検索</button></form>
+  </header>
+
+  <main id="app">
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="pulse"></span> BATTLE INTELLIGENCE SYSTEM</p>
+        <h1>APEX <span>ULTIMATE</span><br>PORTAL</h1>
+        <p class="hero-copy">戦場に必要な情報、分析、ツールをひとつに。</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#legends">データベースを見る <i class="fa-solid fa-arrow-right"></i></a><a class="btn btn-ghost" href="#damage">戦闘計算ツール</a></div>
+        <div class="hero-stats"><div><b>25</b><small>MODULES</small></div><div><b>01</b><small>MISSION</small></div><div><b>∞</b><small>POSSIBILITIES</small></div></div>
+      </div>
+      <div class="hero-art"><div class="hex hex-one"></div><div class="hex hex-two"></div><div class="hero-cross">APEX<br><span>LEGENDS</span></div><div class="hero-line"></div></div>
+    </section>
+    <div class="notice"><i class="fa-solid fa-circle-info"></i> 非公式ファンメイドサイトです。ゲーム内データ・最新環境情報はサンプルを含みます。</div>
+    <div class="section-heading"><div><span class="eyebrow">QUICK ACCESS</span><h2>COMMAND CENTER</h2></div><span class="section-count">01 / 25</span></div>
+    <div class="quick-grid">
+      <a href="#maps" class="quick-card"><i class="fa-solid fa-map"></i><span>マップ情報</span><small>MAP & ROTATION</small></a>
+      <a href="#patches" class="quick-card"><i class="fa-solid fa-file-lines"></i><span>パッチノート</span><small>PATCH INTEL</small></a>
+      <a href="#events" class="quick-card"><i class="fa-solid fa-calendar-days"></i><span>カスタム・イベント</span><small>COMMUNITY</small></a>
+      <a href="#roulette" class="quick-card"><i class="fa-solid fa-dice"></i><span>キャラルーレット</span><small>RANDOM PICK</small></a>
+    </div>
+    <div id="sections"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="brand"><span class="brand-mark">A</span><span>APEX<span class="red">ULTIMATE</span></span></div>
+    <p>Fan-made companion portal. Not affiliated with EA or Respawn Entertainment.</p>
+    <div class="footer-links"><a href="#home">HOME</a><a href="#notes">MY NOTES</a><button id="shareX">Xでシェア</button><button id="shareLine">LINEでシェア</button></div>
+    <small>© 2026 APEX ULTIMATE PORTAL · Apex Legends is a trademark of its respective owners.</small>
+  </footer>
+  <div id="toast" class="toast" role="status"></div>
+  <div id="modal" class="modal" aria-hidden="true"><div class="modal-backdrop" data-close="true"></div><div class="modal-box"><button class="modal-close" data-close="true"><i class="fa-solid fa-xmark"></i></button><div id="modalContent"></div></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
